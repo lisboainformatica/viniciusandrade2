@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif; 
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f1e 0%, #454588 100%);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 500px; 
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 247, 255, 0.2) 0%, rgba(15, 15, 30, 0) 70%);
+    top: 50%;
+    left: 50%;
+  
+}
+
+.botao {
+    padding: 3px 10px;
+    background: linear-gradient(90deg, #00f7ff 0%, #0066ff 100%);
+    border-radius: 30px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    z-index: 2;
+}
+
+.botao:hover {
+    background: linear-gradient(90deg, #0066ff 0%, #00f7ff 100%);
+    transition: 0.3s ease;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5), 0 0 20px rgba(0, 247, 255, 0.5), 0 0 30px rgba(0, 247, 255, 0.5);
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, #0f0f1e 0%, #454588 100%);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 15px 0;
+    width: 100%;
+    font-family: "Orbitron", sans-serif;
+    color: #00f7ff;
+    
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+    color: #00f7ff;
+    
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-family: "Orbitron", sans-serif;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+}
+
+menu li:hover::after{
+    width: 100%;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.destaque {
+    padding: 90px;
+    display: flex;
+}
+
+.destaque .container {
+    display: flex;
+    gap: 30px; 
+    align-items: center;
+}
+
+.texto h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #00f7ff;
+    text-shadow: 0 0 10px rgba(0, 247,255, 0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.recursos .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 247, 255, 0.3);
+    animation: circle 3s infinite alternate
+}
+
+.circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+}
+
+.circle:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    top: 60%;
+    left: 80%;
+}
+
+.circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    top: 77%;
+    left: 10%;
+}
+
+.circle:nth-child(4) {
+    width: 120px;
+    height: 130px;
+    top: 20%;
+    left: 70%;
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    
+}
+
+.icone {
+    font-size: 2rem;
+    color: #00f7ff;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta {
+    background-color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    color: #000;
+    font-size: medium;
+}
+
+.cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+footer {
+    background-color: #0f0f1e;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    font-size: 2rm;
+    cursor: pointer;
+    display: none;
+    color:#00f7ff
+}
+
+@media screen {
+    @media (max-width: 768px) {
+        .destaque .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recursos .container {
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
+
+        .cabecalho {
+            padding: 10px 0;
+            align-items: center;
+        }
+        .navegacao {
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .botao-menu {
+            display: block;
+        }
+        .menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            flex-direction: column;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            max-height: 0;
+            color: black; 
+        }
+        .menu.ativo {
+            max-height: 400px;
+        }
+    }
+}
+
